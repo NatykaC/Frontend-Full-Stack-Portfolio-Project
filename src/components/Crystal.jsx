@@ -1,7 +1,11 @@
-function Crystal() {
+import { Link } from "react-router-dom";
+
+function Crystal({crystal}) {
     return (
         <div>
-           <h1>Testing </h1>
+           <div>
+            <Link to={`/crystals/${crystal.id}`}>{crystal.name}</Link>
+           </div>
         </div>
     )
 };
