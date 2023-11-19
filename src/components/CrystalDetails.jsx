@@ -65,7 +65,7 @@ function CrystalDetails() {
                     Crystal Rarity:<br/>{crystal.rarity}
                     <br/>
                     <br/>
-                    Can This Crystal Be Cleansed Using Water?<br/>{crystal.can_be_water_cleansed ? <span>💧✅💧</span> : <span>💧❌💧</span>}
+                    Can This Crystal Be Cleansed Using Water?<br/>{crystal.can_be_water_cleansed ? <span>💧✅ YES ✅💧</span> : <span>💧❌ NO ❌💧</span>}
                     <br/>
                     <br/>
                     What Are The Healing Effects For This Crystal?<br/>{crystal.healing_effects}
@@ -74,7 +74,7 @@ function CrystalDetails() {
                     When Was This Crystal Created?<br/>{crystal.collected_on}
                     <br/>
                     <br/>
-                    Is This Crystal One Of Your Favorites?<br/>{crystal.favorite ? <span>❤️</span> : <span>💔</span>} 
+                    Is This Crystal One Of Your Favorites?<br/>{crystal.favorite ? <span>❤️ YES ❤️</span> : <span>💔 NO 💔</span>} 
                 </h3>
                 <div>
                     <button>
@@ -83,7 +83,7 @@ function CrystalDetails() {
                 </div>
                 <div>
                     <button>
-                        <Link to={`/crystals/${index}/edit`}>Edit: {crystal.name}</Link>
+                        <Link to={`/crystals/${index}/edit`}>Edit {crystal.name}</Link>
                     </button>
                 </div>
                 <div>

@@ -4,6 +4,7 @@ function NavBar() {
     return (
         <div>
             <div>
+                <h1>APP Name Here!!</h1>
                 <div>
                     <button>
                         <Link to="/">Home</Link>

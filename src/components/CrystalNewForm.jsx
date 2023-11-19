@@ -36,7 +36,7 @@ function CrystalNewForm() {
                 body: JSON.stringify(newCrystalData)
             })
             .then(res=>res.json())
-            .then(()=>navigate('/crystals'))
+            .then(()=>navigate(`/crystals`))
         } catch (error) {
             return error
         }
@@ -90,7 +90,7 @@ function CrystalNewForm() {
                 <input 
                     id="hardness"
                     value={crystal.hardness}
-                    type="num"
+                    type="number"
                     onChange={handleNewFormTextChange}
                     placeholder="Hardness of Crystal"
                     required
@@ -132,7 +132,7 @@ function CrystalNewForm() {
                 <input 
                     id="collected_on"
                     value={crystal.collected_on}
-                    type="text"
+                    type="date"
                     onChange={handleNewFormTextChange}
                     placeholder="YYYY/MM/DD"
                     required
