@@ -33,14 +33,13 @@ function CrystalDetails() {
         fetchOneCrystal()
     }, []);
 
-    const handleConfirmDeleteBox = ()=>{
-        if(confirm("press a button!")){
-            txt = "you pressed ok"
-        } else {
-            txt = "you pressed cancel!"
+    const HandleDeleteCrystal = ()=>{ 
+
+        const confirmDeleteBox = window.confirm("🚨 WAIT!!!!! Are you sure you want to delete this crystal? 🚨")
+        if(!confirmDeleteBox){
+            return
         }
-    }
-    const HandleDeleteCrystal = ()=>{
+
         try {
             fetch(`${API}/crystals/${id}`, {
                 method: 'DELETE',
@@ -49,7 +48,7 @@ function CrystalDetails() {
                 },
                 body: JSON.stringify(crystal)
             })
-            // handleConfirmDeleteBox()
+            
             .then(res=>res.json())
             .then(()=>navigate("/crystals"))
         } catch (error) {
