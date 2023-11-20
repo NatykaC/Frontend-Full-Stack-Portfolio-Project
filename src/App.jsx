@@ -17,8 +17,8 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/crystals" element={<Index/>}/>
             <Route path="/crystals/new" element={<New/>}/>
-            <Route path="/crystals/:index" element={<Show/>}/>
-            <Route path="/crystals/:index/edit" element={<Edit/>}/>
+            <Route path="/crystals/:id" element={<Show/>}/>
+            <Route path="/crystals/:id/edit" element={<Edit/>}/>
           </Routes>
         </main>
       </Router>

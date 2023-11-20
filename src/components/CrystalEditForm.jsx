@@ -18,7 +18,7 @@ function CrystalEditForm() {
         favorite: false
     });
     
-    const updateCrystal = ()=>{
+    const updateCrystal = ()=>{    
         const editedCrystalData = {
             name: crystal.name,
             color: crystal.color,
@@ -29,7 +29,7 @@ function CrystalEditForm() {
             collected_on: crystal.collected_on,
             favorite: false
         }
-        console.log(editedCrystalData)
+
         try {
             fetch(`${API}/crystals/${id}`, {
                 method:'PUT',
@@ -45,7 +45,6 @@ function CrystalEditForm() {
         } catch (error) {
             return error
         }
-
     };
     
     useEffect(()=>{
@@ -55,11 +54,10 @@ function CrystalEditForm() {
             setCrystal(resJSON)
         })
         .catch((error) => console.error("show", error))
-        // console.log(crystal)
     }, [id]);
     
     const handleEditFormTextChange = (e)=>{
-        setCrystal({ ...crystal, [e.target.id] : e.target.value})
+        setCrystal({ ...crystal, [e.target.id]: e.target.value})
     };
     
     const handleWaterCleansedCheckboxChange = ()=>{
@@ -166,8 +164,9 @@ function CrystalEditForm() {
             </form>
             <br/>
             <button>
-                <Link to={`/crystals/${id}`}>Don't Edit {crystal.name}</Link>
+                <Link to={`/crystals/${id}`}>Don't Edit {crystal.name   }</Link>
             </button>
+            <br/>
             <button>
                 <Link to={'/crystals'}>Return to My Crystals List</Link>
             </button>

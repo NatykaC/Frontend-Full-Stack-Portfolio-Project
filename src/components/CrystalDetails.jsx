@@ -15,13 +15,13 @@ function CrystalDetails() {
        favorite: false
     });
 
-    let {index}=useParams();
+    let {id}=useParams();
     let navigate = useNavigate();
 
     useEffect(()=>{
         const fetchOneCrystal = async()=>{
             try {
-                fetch(`${API}/crystals/${index}`)
+                fetch(`${API}/crystals/${id}`)
                 .then(res=>res.json())
                 .then(res=>{
                     setCrystal(res)
@@ -33,15 +33,23 @@ function CrystalDetails() {
         fetchOneCrystal()
     }, []);
 
+    const handleConfirmDeleteBox = ()=>{
+        if(confirm("press a button!")){
+            txt = "you pressed ok"
+        } else {
+            txt = "you pressed cancel!"
+        }
+    }
     const HandleDeleteCrystal = ()=>{
         try {
-            fetch(`${API}/crystals/${index}`, {
+            fetch(`${API}/crystals/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify(crystal)
             })
+            // handleConfirmDeleteBox()
             .then(res=>res.json())
             .then(()=>navigate("/crystals"))
         } catch (error) {
@@ -83,7 +91,7 @@ function CrystalDetails() {
                 </div>
                 <div>
                     <button>
-                        <Link to={`/crystals/${index}/edit`}>Edit {crystal.name}</Link>
+                        <Link to={`/crystals/${id}/edit`}>Edit {crystal.name}</Link>
                     </button>
                 </div>
                 <div>
