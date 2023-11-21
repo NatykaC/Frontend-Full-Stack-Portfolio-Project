@@ -74,7 +74,7 @@ function CrystalEditForm() {
     };
     return (
         <div>
-            <h1>Edit {crystal.name}</h1>
+            <h1>🚧 Edit {crystal.name} 🚧</h1>
             <form onSubmit={handleEditFormSubmit}>
                 <label htmlFor="name">Name: </label>
                 <input 
@@ -160,15 +160,16 @@ function CrystalEditForm() {
                 />
                 <br/>
                 <br/>
-                <button type="submit">Edit {crystal.name}!</button>
+                <button type="submit">🚧 Edit {crystal.name} 🚧</button>
             </form>
             <br/>
             <button>
-                <Link to={`/crystals/${id}`}>Don't Edit {crystal.name   }</Link>
+                <Link to={`/crystals/${id}`}>❌🚧 Don't Edit {crystal.name} 🚧❌</Link>
             </button>
             <br/>
+            <br/>
             <button>
-                <Link to={'/crystals'}>Return to My Crystals List</Link>
+                <Link to={'/crystals'}>🔙 Return to My List 🔙</Link>
             </button>
         </div>
     )

@@ -4,7 +4,9 @@ function Crystal({crystal}) {
     return (
         <div>
            <div>
-            <Link to={`/crystals/${crystal.id}`}>{crystal.name}</Link>
+            <h4>
+                <Link to={`/crystals/${crystal.id}`}>✨ {crystal.name} ✨</Link>
+            </h4>
            </div>
         </div>
     )

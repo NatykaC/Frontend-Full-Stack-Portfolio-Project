@@ -35,7 +35,7 @@ function CrystalDetails() {
 
     const HandleDeleteCrystal = ()=>{ 
 
-        const confirmDeleteBox = window.confirm("🚨 WAIT!!!!! Are you sure you want to delete this crystal? 🚨")
+        const confirmDeleteBox = window.confirm("🚨 WAIT!!!!! Are you sure you want to 💥 delete 💥 this crystal? 🚨")
         if(!confirmDeleteBox){
             return
         }
@@ -47,8 +47,7 @@ function CrystalDetails() {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify(crystal)
-            })
-            
+            }) 
             .then(res=>res.json())
             .then(()=>navigate("/crystals"))
         } catch (error) {
@@ -78,23 +77,25 @@ function CrystalDetails() {
                     What Are The Healing Effects For This Crystal?<br/>{crystal.healing_effects}
                     <br/>
                     <br/>
-                    When Was This Crystal Created?<br/>{crystal.collected_on}
+                    When Was This Crystal Added To My List?<br/>{crystal.collected_on}
                     <br/>
                     <br/>
-                    Is This Crystal One Of Your Favorites?<br/>{crystal.favorite ? <span>❤️ YES ❤️</span> : <span>💔 NO 💔</span>} 
+                    Is This Crystal A Favorite?<br/>{crystal.favorite ? <span>❤️ YES ❤️</span> : <span>💔 NO 💔</span>} 
                 </h3>
                 <div>
                     <button>
-                        <Link to={'/crystals'}>Back to My Crystals List</Link>
+                        <Link to={'/crystals'}>🔙 Return to My List 🔙</Link>
                     </button>
                 </div>
+                <br/>
                 <div>
                     <button>
-                        <Link to={`/crystals/${id}/edit`}>Edit {crystal.name}</Link>
+                        <Link to={`/crystals/${id}/edit`}>🚧 Edit {crystal.name} 🚧</Link>
                     </button>
                 </div>
+                <br/>
                 <div>
-                    <button onClick={HandleDeleteCrystal}>Delete {crystal.name}</button>
+                    <button onClick={HandleDeleteCrystal}>💥 Delete {crystal.name} 💥</button>
                 </div>
             </div>
         </div>

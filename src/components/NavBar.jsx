@@ -4,20 +4,20 @@ function NavBar() {
     return (
         <div>
             <div>
-                <h1>APP Name Here!!</h1>
+                <h1>✨ Divine Crystals ✨</h1>
                 <div>
                     <button>
-                        <Link to="/">Home</Link>
+                        <Link to="/">⭐️ Home ⭐️</Link>
                     </button>
                 <br/>
                 </div>
                 <button>
-                    <Link to="/crystals">My Crystals List</Link>
+                    <Link to="/crystals">📋 My List 📋</Link>
                 </button>
                 <br/>
                 <div>
                     <button>
-                        <Link to="/crystals/new">Add a New Crystal to My Crystals List</Link>
+                        <Link to="/crystals/new">🆕 Add a New Crystal to My List 🆕</Link>
                     </button>
                 </div>
             </div>

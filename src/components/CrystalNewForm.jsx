@@ -61,7 +61,7 @@ function CrystalNewForm() {
 
     return (
         <div>
-            <h1>Add a New Crystal!</h1>
+            <h1>🆕 Add a New Crystal 🆕</h1>
             <br/>
             <form onSubmit={handleNewFormSubmit}>
                 <label htmlFor="name">Name: </label>
@@ -148,11 +148,11 @@ function CrystalNewForm() {
                 />
                 <br/>
                 <br/>
-                <button type="submit">Add New Crystal!</button>
+                <button type="submit">✅ 🆕 Add New Crystal to My List 🆕 ✅</button>
             </form>
             <br/>
             <button>
-                <Link to={'/crystals'}>Return to My Crystals List</Link>
+                <Link to={'/crystals'}>🔙 Return to My List 🔙</Link>
             </button>
         </div>
     )
