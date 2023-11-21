@@ -25,7 +25,7 @@ function Crystals() {
         <div>
             <h1>
                 {crystals.map((crystal)=>{
-                    return <Crystal key={crystal.id} crystal={crystal}/>
+                    return <Crystal key={crystal.id} crystal={crystal}/> 
                 })}
             </h1>
         </div>
