@@ -10,7 +10,7 @@ With this app a user can
 
 On the "Home" page you will find a brief description of the app along with a link to view your crystal collection - "My List" and a link to create/add a new crystal to your collection. 
 
-When "My List" is clicked a list of all the crystals currently in your collection are show.
+When "My List" is clicked a list of all the crystals currently in your collection are shown.
 
 Click the name of a crystal in "My List" to view more detailed information about one crystal.
 
@@ -21,7 +21,7 @@ Use the "Add a New Crystal" form to add a new crystal to your collection.
 Use the "Delete" button to remove a crystal you no longer want in your collection.
 
 Stretch Goal
--Added middleware as part of the backend that validates crystal name and color.
+-Added middleware as part of the backend that validates crystal name and crystal color.
 
 Frontend Netlify Link:
 https://divine-crystals-by-natyka-callwood.netlify.app/
