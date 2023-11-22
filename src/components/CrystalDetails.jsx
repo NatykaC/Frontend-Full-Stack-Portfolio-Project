@@ -34,12 +34,10 @@ function CrystalDetails() {
     }, []);
 
     const HandleDeleteCrystal = ()=>{ 
-
         const confirmDeleteBox = window.confirm("🚨 WAIT!!!!! Are you sure you want to 💥 delete 💥 this crystal? 🚨")
         if(!confirmDeleteBox){
             return
         }
-
         try {
             fetch(`${API}/crystals/${id}`, {
                 method: 'DELETE',
