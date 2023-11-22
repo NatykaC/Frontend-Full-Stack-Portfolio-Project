@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <div>
+        <div >
             <div>
-                <h1>✨ Divine Crystals ✨</h1>
+                <h1 className="navbar">✨ Divine Crystals ✨</h1>
                 <div>
                     <button>
                         <Link to="/">⭐️ Home ⭐️</Link>
